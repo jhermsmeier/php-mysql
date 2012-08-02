@@ -67,7 +67,7 @@
         $meta = $stmt->result_metadata();
         // is it a write op?
         if( !$meta ) {
-          return [
+          $results = [
             'affectedRows' => $stmt->affected_rows,
             'insertId'     => $stmt->insert_id
           ]
